@@ -9,8 +9,19 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".RecuperarContrasennaActivity"
-                  android:parentActivityName=".LoginActivity">
+        <activity android:name=".LibrosActivity">
+        </activity>
+        <activity android:name=".ConfiguracionActivity">
+        </activity>
+        <activity android:name=".Lectura">
+        </activity>
+        <activity android:name=".VersiculosActivity">
+        </activity>
+        <activity android:name=".CapitulosActivity">
+        </activity>
+        <activity
+                android:name=".RecuperarContrasennaActivity"
+                android:parentActivityName=".LoginActivity">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
                     android:value=".LoginActivity"/>

@@ -47,6 +47,10 @@
                     android:layout_height="wrap_content" android:id="@+id/textView14" android:layout_weight="1"/>
         </LinearLayout>
         <Button
+                android:text="Buscar Lectura"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/button101" android:onClick="onClickLibros"/>
+        <Button
                 android:text="Citas Guardadas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" android:id="@+id/button4"/>
@@ -54,6 +58,10 @@
                 android:text="Historial"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" android:id="@+id/button5"/>
+        <Button
+                android:text="Configuración"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/button8"/>
         <Button
                 android:text="Datos del creador"
                 android:layout_width="match_parent"
