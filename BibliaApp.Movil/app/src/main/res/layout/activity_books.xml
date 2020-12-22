@@ -4,8 +4,7 @@
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-        tools:context=".LibrosActivity">
-
+        tools:context=".Libros.BooksActivity">
 
     <LinearLayout
             android:orientation="vertical"
@@ -13,7 +12,7 @@
             android:layout_height="match_parent">
         <SearchView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/SearchLibros"/>
+                android:layout_height="wrap_content" android:id="@+id/SearchLibros" android:queryHint="Buscar"/>
         <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerView"
                 android:layout_width="match_parent"
@@ -22,4 +21,5 @@
                 android:padding="4dp"
                 android:scrollbars="vertical"/>
     </LinearLayout>
+
 </RelativeLayout>
