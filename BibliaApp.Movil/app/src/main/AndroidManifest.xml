@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.rperdomo.bibliaapp">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
             android:allowBackup="true"
@@ -13,13 +13,21 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             android:usesCleartextTraffic="true">
-        <activity android:name=".Libros.BooksActivity">
+        <activity android:name=".Capitulos.ChapterActivity"
+                  android:parentActivityName=".Libros.BooksActivity">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value=".Libros.BooksActivity"/>
+        </activity>
+
+        <activity
+                android:name=".Libros.BooksActivity"
+                android:parentActivityName=".MainActivity">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value=".MainActivity"/>
         </activity>
         <activity android:name=".ConfiguracionActivity">
-        </activity>
-        <activity android:name=".VersiculosActivity">
-        </activity>
-        <activity android:name=".CapitulosActivity">
         </activity>
         <activity
                 android:name=".RecuperarContrasennaActivity"

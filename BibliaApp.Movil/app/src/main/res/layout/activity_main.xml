@@ -24,11 +24,12 @@
                     android:layout_height="138dp"
                     android:layout_width="45dp" app:srcCompat="@drawable/creacion"
                     android:id="@+id/imageButton1" android:layout_weight="1" tools:srcCompat="@drawable/creacion"
-                    style="@android:style/Widget.DeviceDefault.ImageButton"/>
+                    style="@android:style/Widget.DeviceDefault.ImageButton" android:onClick="onClickLibros"/>
             <ImageButton
                     android:scaleType="fitXY"
-                    android:layout_height="138dp" android:layout_width="45dp" app:srcCompat="@drawable/jesus" android:id="@+id/imageButton2"
-                    android:layout_weight="1" tools:srcCompat="@drawable/jesus"/>
+                    android:layout_height="138dp" android:layout_width="45dp" app:srcCompat="@drawable/jesus"
+                    android:id="@+id/imageButton2"
+                    android:layout_weight="1" tools:srcCompat="@drawable/jesus" android:onClick="onClickLibros"/>
         </LinearLayout>
         <LinearLayout
                 android:orientation="horizontal"

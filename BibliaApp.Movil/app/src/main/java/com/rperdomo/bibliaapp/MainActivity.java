@@ -4,11 +4,13 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.view.View;
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import com.rperdomo.bibliaapp.Libros.BooksActivity;
+import com.rperdomo.bibliaapp.Utilidades.ClasesUtiles;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -39,11 +41,24 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickLibros(View v) {
+        String IdTestamento = "";
         Intent intent = new Intent (this, BooksActivity.class);
-
-        startActivityForResult(intent, 0);
-
-
-
+        if (v.getId() == R.id.imageButton1)
+        {
+            IdTestamento = getString(R.string.AntiguoTestamento);
+        }
+        else if(v.getId() == R.id.imageButton2)
+        {
+            IdTestamento = getString(R.string.NuevoTestamento);
+        }
+        else
+            {
+               //Logic
+            }
+        if (!ClasesUtiles.isNullOrBlank(IdTestamento))
+        {
+            intent.putExtra(getString(R.string.TipoTestamento), IdTestamento);
+        }
+        startActivity(intent);
     }
 }

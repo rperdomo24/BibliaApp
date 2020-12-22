@@ -73,6 +73,7 @@ public class BooksAdapter extends RecyclerView.Adapter<BooksAdapter.BooksAdapter
                // Log.i(TAG, String.valueOf(items.get(i).getIdBook()));
             }
             BookList = ListTemp;
+            BookFilterList = BookList;
             notifyDataSetChanged();
         }else
         {

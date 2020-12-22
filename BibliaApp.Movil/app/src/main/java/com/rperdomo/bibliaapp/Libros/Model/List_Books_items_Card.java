@@ -36,8 +36,4 @@ public class List_Books_items_Card {
     private int ImagenBook;
     private String NameBook;
     private int IdBook;
-
-
-
-
 }
