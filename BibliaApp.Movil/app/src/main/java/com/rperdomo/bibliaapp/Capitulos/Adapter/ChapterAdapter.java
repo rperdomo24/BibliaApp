@@ -101,7 +101,7 @@ public class ChapterAdapter extends RecyclerView.Adapter<ChapterAdapter.ChapterA
     public void onBindViewHolder(ChapterAdapter.ChapterAdapterViewHolder holder, int position) {
         List_Chapter_items_Card currentItem = ChapterList.get(position);
         holder.mImageView.setImageResource(currentItem.getImagenBook());
-        holder.mTextView1.setText(String.valueOf(currentItem.getIdChapter()));
+        holder.mTextView1.setText("Capítulo "+String.valueOf(currentItem.getIdChapter()));
     }
 
     @Override

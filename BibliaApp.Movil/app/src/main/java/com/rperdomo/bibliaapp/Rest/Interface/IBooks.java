@@ -1,6 +1,7 @@
 package com.rperdomo.bibliaapp.Rest.Interface;
 
 import com.rperdomo.bibliaapp.Capitulos.Model.chapter;
+import com.rperdomo.bibliaapp.Lecturas.Model.bible_verses;
 import com.rperdomo.bibliaapp.Libros.Model.bible_books;
 import retrofit2.Call;
 import retrofit2.http.*;
@@ -18,6 +19,6 @@ public interface IBooks {
     Call<List<chapter>> AllChapter(@Path("capitulo") int capitulo);
 
     @GET("/api/Biblia/ReadChapter/{idbook}/{chapter}")
-    Call<List<chapter>> ReadChapter(@Path("testament") int idbook, @Path("chapter") int chapter);
+    Call<List<bible_verses>> ReadChapter(@Path("idbook") int idbook, @Path("chapter") int chapter);
 
 }

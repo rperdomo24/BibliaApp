@@ -13,13 +13,15 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             android:usesCleartextTraffic="true">
-        <activity android:name=".Capitulos.ChapterActivity"
-                  android:parentActivityName=".Libros.BooksActivity">
+        <activity android:name=".Lecturas.VersesActivity">
+        </activity>
+        <activity
+                android:name=".Capitulos.ChapterActivity"
+                android:parentActivityName=".Libros.BooksActivity">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
                     android:value=".Libros.BooksActivity"/>
         </activity>
-
         <activity
                 android:name=".Libros.BooksActivity"
                 android:parentActivityName=".MainActivity">
