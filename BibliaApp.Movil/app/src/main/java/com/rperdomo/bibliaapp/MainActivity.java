@@ -61,4 +61,15 @@ public class MainActivity extends AppCompatActivity {
         }
         startActivity(intent);
     }
+
+    public void Acercade(View v)
+    {
+        Intent intent = new Intent (this, CreadorActivity.class);
+        startActivity(intent);
+    }
+
+    public void cerraApp(View v)
+    {
+        System.exit(0);
+    }
 }

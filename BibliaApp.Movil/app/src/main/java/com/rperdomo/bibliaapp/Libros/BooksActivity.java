@@ -54,9 +54,9 @@ BooksActivity extends AppCompatActivity {
             @Override
             public void onItemClick(int position) {
                 List_Books_items_Card data = mAdapter.getItem(position);
-                Toast.makeText(BooksActivity.this, String.valueOf(data.getIdBook()), Toast.LENGTH_SHORT).show();
-
+                //Toast.makeText(BooksActivity.this, String.valueOf(data.getIdBook()), Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent (BooksActivity.this, ChapterActivity.class);
+                intent.putExtra(getString(R.string.Idbook), String.valueOf(data.getIdBook()));
                 startActivity(intent);
             }
         });

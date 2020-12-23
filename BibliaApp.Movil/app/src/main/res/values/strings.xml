@@ -3,4 +3,8 @@
     <string name="AntiguoTestamento">O</string>
     <string name="NuevoTestamento">N</string>
     <string name="TipoTestamento"/>
+    <string name="Idbook"/>
+    <string name="IdCapitulos"/>
+    <string name="Idbook2">Idbook2 </string>
+    <string name="IdCapitulosNew">IdCapitulosNew</string>>
 </resources>

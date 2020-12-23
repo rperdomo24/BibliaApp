@@ -26,14 +26,16 @@ import retrofit2.Response;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.lang.Integer.parseInt;
+
 public class VersesActivity extends AppCompatActivity {
 
     private VersesAdapter mAdapter;
     private RecyclerView mRecylerView;
     private RecyclerView.LayoutManager mLayoutManager;
     private IBooks mServices;
-    int IdCapitulos =1;
-    int IdLibro = 5;
+    int IdCapitulos =0;
+    int IdLibro = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,19 +57,21 @@ public class VersesActivity extends AppCompatActivity {
             @Override
             public void onItemClick(int position) {
                 List_Verses_items_Card data = mAdapter.getItem(position);
-                Toast.makeText(VersesActivity.this, String.valueOf(data.getTextVerse()), Toast.LENGTH_SHORT).show();
-
-              // Intent intent = new Intent (BooksActivity.this, ChapterActivity.class);
-               // startActivity(intent);
+               // Toast.makeText(VersesActivity.this, String.valueOf(data.getTextVerse()), Toast.LENGTH_SHORT).show();
             }
         });
 
         Intent intent = getIntent();
+
         if (intent != null)
         {
-           // String data = intent.getStringExtra(getString(R.string.TipoTestamento));
-            //if (!ClasesUtiles.isNullOrBlank(data))
-              //  IdTestamento =  data;
+            IdLibro =  parseInt(intent.getStringExtra(getString(R.string.Idbook2)));
+
+            int data123 = intent.getExtras().getInt(getString(R.string.IdCapitulosNew),0);
+
+            IdCapitulos =  data123;
+
+            Toast.makeText(this,String.valueOf(data123), Toast.LENGTH_SHORT).show();
         }
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);

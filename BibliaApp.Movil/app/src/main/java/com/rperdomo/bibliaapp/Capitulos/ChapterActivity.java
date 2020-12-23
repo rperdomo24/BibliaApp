@@ -27,6 +27,8 @@ import retrofit2.Response;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.lang.Integer.parseInt;
+
 public class ChapterActivity extends AppCompatActivity {
 
     private RecyclerView mRecylerView;
@@ -34,7 +36,7 @@ public class ChapterActivity extends AppCompatActivity {
     private RecyclerView.LayoutManager mLayoutManager;
 
     private IBooks mServices;
-    int _IdBook = 1;
+    int _IdBook = 0;
 //recyclerViewChapter
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,9 +59,15 @@ public class ChapterActivity extends AppCompatActivity {
             @Override
             public void onItemClick(int position) {
                 List_Chapter_items_Card data = mAdapter.getItem(position);
-                Toast.makeText(ChapterActivity.this, String.valueOf(data.getIdChapter()), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(ChapterActivity.this, String.valueOf(data.getIdChapter()), Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent (ChapterActivity.this, VersesActivity.class);
+
+                int data123= data.getIdChapter();
+
+                intent.putExtra(getString(R.string.IdCapitulosNew), data123);
+                intent.putExtra(getString(R.string.Idbook2), String.valueOf(_IdBook));
+
                 startActivity(intent);
             }
         });
@@ -67,9 +75,7 @@ public class ChapterActivity extends AppCompatActivity {
         Intent intent = getIntent();
         if (intent != null)
         {
-           // String data = intent.getStringExtra(getString(R.string.TipoTestamento));
-          //  if (!ClasesUtiles.isNullOrBlank(data))
-            //    IdTestamento =  data;
+            _IdBook =  parseInt(intent.getStringExtra(getString(R.string.Idbook)));
         }
 
         loadAnswers(_IdBook);
