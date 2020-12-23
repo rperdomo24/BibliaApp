@@ -8,7 +8,7 @@ import retrofit2.http.GET;
 
 
 public class HelperApi {
-    public static final String BASE_URL = "http://30d3391d2a50.ngrok.io ";
+    public static final String BASE_URL = "http://bibliaapp.azurewebsites.net/";
 
     public static IBooks GetAllBooks() {
         return RetrofitClient.getClient(BASE_URL).create(IBooks.class);
